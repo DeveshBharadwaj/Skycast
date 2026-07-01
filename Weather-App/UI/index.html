@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skycast — Weather Forecast</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <div class="app-container">
+
+    <!-- Header -->
+    <header class="app-header">
+      <h1 class="app-title">Sky<span>cast</span></h1>
+      <p class="app-subtitle">Real-time forecast, city by city</p>
+    </header>
+
+    <!-- Search Card -->
+    <div class="search-card">
+      <div class="search-row">
+        <div class="input-group city-group">
+          <label for="cityInput">City</label>
+          <input id="cityInput" class="input-field" type="text"
+            placeholder="e.g. Patna, Mumbai, Delhi…"
+            value="Patna" autocomplete="off" spellcheck="false"/>
+        </div>
+        <div class="input-group days-group">
+          <label for="daysInput">Days</label>
+          <input id="daysInput" class="input-field" type="number"
+            min="1" max="14" placeholder="1–14" value="5"/>
+        </div>
+        <button id="fetchBtn" class="fetch-btn">Get Forecast</button>
+      </div>
+      <div id="errorMsg" class="error-msg" role="alert"></div>
+    </div>
+
+    <!-- Loading -->
+    <div id="loadingState" class="loading-state">
+      <div class="loader"></div>
+      <p class="loading-text">Fetching forecast…</p>
+    </div>
+
+    <!-- Results -->
+    <section id="resultsSection" class="results-section" aria-live="polite">
+
+      <!-- Current Weather -->
+      <div class="current-card">
+        <div class="weather-icon-wrap">
+          <img id="currentIcon" src="" alt="Weather condition"/>
+        </div>
+        <div class="current-info">
+          <div id="locationLine" class="location-line"></div>
+          <div id="cityName" class="city-name"></div>
+          <div id="conditionText" class="condition-text"></div>
+          <div class="temp-display">
+            <span id="currentTemp" class="temp-value">--</span>
+            <span class="temp-unit">°C</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Forecast Cards -->
+      <p class="section-label">Day-by-day Forecast</p>
+      <div id="forecastGrid" class="forecast-grid"></div>
+
+      <!-- Chart -->
+      <div class="chart-card">
+        <div class="chart-header">
+          <span class="section-label" style="margin:0">Temperature Trend</span>
+          <div class="chart-legend">
+            <div class="legend-item"><span class="legend-dot max"></span>Max</div>
+            <div class="legend-item"><span class="legend-dot avg"></span>Avg</div>
+            <div class="legend-item"><span class="legend-dot min"></span>Min</div>
+          </div>
+        </div>
+        <div id="tempChart"></div>
+      </div>
+
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
