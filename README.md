@@ -22,17 +22,17 @@ Skycast is a full-stack web application that delivers real-time weather informat
 ### Frontend
 * **Markup & Structure**: HTML5
 * **Styling & Layout**: CSS3 (with responsive Flexbox/Grid layouts)
-* **Interactivity & API Requests**: JavaScript (Fetch API / Async-Await)
+* **Interactivity & API Requests**: JavaScript
 
 ---
 
 ## 📋 Prerequisites
 
 Ensure you have the following installed on your local machine before starting setup:
-* **Java Development Kit (JDK)** (Version 17 or higher recommended)
-* **MySQL Server** (Version 8.0 or higher)
-* **An IDE** (IntelliJ IDEA, Eclipse, or VS Code)
-* **An External Weather API Key** (e.g., OpenWeatherMap or WeatherAPI)
+* **Java Development Kit (JDK)** (Version 17)
+* **MySQL Server** (Version 8.0 )
+* **An IDE** (IntelliJ IDEA,VS Code)
+* **An External Weather API Key** (OpenWeatherMap )
 
 ---
 
@@ -62,7 +62,7 @@ weather.api.base-url=https://openweathermap.org
 
 ### Phase 3: Launching the Frontend
 Since the frontend uses standard HTML, CSS, and JS:
-1. Navigate to your frontend file directory (usually inside  `UI` directory).
+1. Navigate to your frontend file directory ( `UI` directory).
 2. Open `index.html` directly in any modern web browser or serve it using a local live-reload server extension (like VS Code Live Server).
 
 ---
